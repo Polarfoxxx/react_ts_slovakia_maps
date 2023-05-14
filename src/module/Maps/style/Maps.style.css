@@ -1,0 +1,10 @@
+.maps{
+    width: 60%;
+    height: 30vw;
+    border: 1px solid red;
+}
+
+.leaflet-container{
+    height: 100%;
+    width: 100%;
+}
