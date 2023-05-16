@@ -1,2 +1,2 @@
 export { default as Container } from "./Components/Container"
-export { default as Navbar } from "./Components/Navbar"
+export { default as NaviBar } from "./Components/NaviBar"

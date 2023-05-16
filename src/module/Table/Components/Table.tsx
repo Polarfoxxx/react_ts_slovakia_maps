@@ -49,6 +49,12 @@ function Table(): JSX.Element {
     const [data, setData] = React.useState(() => [...defaultData])
     const rerender = React.useReducer(() => ({}), {})[1]
 
+const handleTable = () => {
+    console.log("rrrjn");
+    
+}
+
+
     const table = useReactTable({
         data,
         columns,
@@ -78,7 +84,10 @@ function Table(): JSX.Element {
                     {table.getRowModel().rows.map(row => (
                         <tr key={row.id}>
                             {row.getVisibleCells().map(cell => (
-                                <td key={cell.id}>
+                                <td
+                                style={{cursor: "pointer"}}
+                                onClick={handleTable}
+                                key={cell.id}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                 </td>
                             ))}
