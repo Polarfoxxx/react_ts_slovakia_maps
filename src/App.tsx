@@ -10,10 +10,9 @@ import { ModalForm } from './module/ModalForm';
 function App(): JSX.Element {
   const [index, setIndex] = React.useState(0)
   const [show, setShow] = React.useState(false);
-
   let components: JSX.Element | JSX.Element[] = []
 
-  /* podmienka pre prepinanie zobrazenia componentov */
+  /* prepinanie zobrazenia componentov */
   if (index === 0) {
     components = <Maps />
   } else if (index === 1) {

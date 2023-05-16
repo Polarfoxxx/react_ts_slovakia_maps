@@ -12,10 +12,10 @@ type Props = {
 function ModalForm({ show, setShow }: Props) {
     const handleClose = () => setShow(false);
 
-const handleMumberOfInhabitants = (event: React.MouseEvent<HTMLButtonElement>): void => {
-console.log("dd");
+    const handleMumberOfInhabitants = (event: React.MouseEvent<HTMLButtonElement>): void => {
+        console.log("dd");
 
-}
+    }
 
     return (
         <>

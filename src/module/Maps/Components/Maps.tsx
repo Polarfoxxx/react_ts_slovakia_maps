@@ -8,7 +8,7 @@ function Maps(): JSX.Element {
 
 
 
-    const position: any = [48.7411522,  19.4528646]
+    const position: any = [48.14,  17.10]
     
     return (
         <div className="maps">
