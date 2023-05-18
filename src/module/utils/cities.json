@@ -1,452 +1,74 @@
-{
-    "okresne_mesta": [
-        {
-            "meno": "Banská Bystrica",
-            "obyvatelia": 80068,
-            "souradnice": {
-                "sirka": 48.736129,
-                "dlzka": 19.153262
-            }
-        },
-        {
-            "meno": "Bardejov",
-            "obyvatelia": 52215,
-            "souradnice": {
-                "sirka": 49.295773,
-                "dlzka": 21.273502
-            }
-        },
-        {
-            "meno": "Bratislava",
-            "obyvatelia": 437725,
-            "souradnice": {
-                "sirka": 48.143888,
-                "dlzka": 17.109306
-            }
-        },
-        {
-            "meno": "Dolný Kubín",
-            "obyvatelia": 19454,
-            "souradnice": {
-                "sirka": 49.214458,
-                "dlzka": 19.282334
-            }
-        },
-        {
-            "meno": "Dunajská Streda",
-            "obyvatelia": 22706,
-            "souradnice": {
-                "sirka": 47.987855,
-                "dlzka": 17.618751
-            }
-        },
-        {
-            "meno": "Galanta",
-            "obyvatelia": 16905,
-            "souradnice": {
-                "sirka": 48.205647,
-                "dlzka": 17.729150
-            }
-        },
-        {
-            "meno": "Gelnica",
-            "obyvatelia": 6186,
-            "souradnice": {
-                "sirka": 48.858639,
-                "dlzka": 20.944748
-            }
-        },
-        {
-            "meno": "Hlohovec",
-            "obyvatelia": 22909,
-            "souradnice": {
-                "sirka": 48.424370,
-                "dlzka": 17.818932
-            }
-        },
-        {
-            "meno": "Humenné",
-            "obyvatelia": 33162,
-            "souradnice": {
-                "sirka": 48.934930,
-                "dlzka": 21.905384
-            }
-        },
-        {
-            "meno": "Kežmarok",
-            "obyvatelia": 16817,
-            "souradnice": {
-                "sirka": 49.139641,
-                "dlzka": 20.427797
-            }
-        },
-        {
-            "meno": "Košice",
-            "obyvatelia": 241688,
-            "souradnice": {
-                "sirka": 48.719390,
-                "dlzka": 21.257490
-            }
-        },
-        {
-            "meno": "Krupina",
-            "obyvatelia": 9937,
-            "souradnice": {
-                "sirka": 48.406130,
-                "dlzka": 19.056262
-            }
-        },
-        {
-            "meno": "Levice",
-            "obyvatelia": 34333,
-            "souradnice": {
-                "sirka": 48.218158,
-                "dlzka": 18.605330
-            }
-        },
-        {
-            "meno": "Liptovský Mikuláš",
-            "obyvatelia": 31995,
-            "souradnice": {
-                "sirka": 49.080112,
-                "dlzka": 19.624005
-            }
-        },
-        {
-            "meno": "Lučenec",
-            "obyvatelia": 28688,
-            "souradnice": {
-                "sirka": 48.330760,
-                "dlzka": 19.670060
-            }
-        },
-        {
-            "meno": "Malacky",
-            "obyvatelia": 17627,
-            "souradnice": {
-                "sirka": 48.434936,
-                "dlzka": 17.019822
-            }
-        },
-        {
-            "meno": "Martin",
-            "obyvatelia": 61325,
-            "souradnice": {
-                "sirka": 49.065917,
-                "dlzka": 18.919136
-            }
-        },
-        {
-            "meno": "Medzilaborce",
-            "obyvatelia": 6402,
-            "souradnice": {
-                "sirka": 49.270253,
-                "dlzka": 21.905753
-            }
-        },
-        {
-            "meno": "Michalovce",
-            "obyvatelia": 39255,
-            "souradnice": {
-                "sirka": 48.755212,
-                "dlzka": 21.922343
-            }
-        },
-        {
-            "meno": "Myjava",
-            "obyvatelia": 12055,
-            "souradnice": {
-                "sirka": 48.741346,
-                "dlzka": 17.536692
-            }
-        },
-        {
-            "meno": "Námestovo",
-            "obyvatelia": 15968,
-            "souradnice": {
-                "sirka": 49.419168,
-                "dlzka": 19.284212
-            }
-        },
-        {
-            "meno": "Nitra",
-            "obyvatelia": 77250,
-            "souradnice": {
-                "sirka": 48.307535,
-                "dlzka": 18.084354
-            }
-        },
-        {
-            "meno": "Nové Mesto nad Váhom",
-            "obyvatelia": 20667,
-            "souradnice": {
-                "sirka": 48.760610,
-                "dlzka": 17.823217
-            }
-        },
-        {
-            "meno": "Nové Zámky",
-            "obyvatelia": 42614,
-            "souradnice": {
-                "sirka": 47.986015,
-                "dlzka": 18.162569
-            }
-        },
-        {
-            "meno": "Partizánske",
-            "obyvatelia": 22808,
-            "souradnice": {
-                "sirka": 48.628138,
-                "dlzka": 18.392748
-            }
-        },
-        {
-            "meno": "Pezinok",
-            "obyvatelia": 22677,
-            "souradnice": {
-                "sirka": 48.287741,
-                "dlzka": 17.266429
-            }
-        },
-        {
-            "meno": "Piešťany",
-            "obyvatelia": 29861,
-            "souradnice": {
-                "sirka": 48.594500,
-                "dlzka": 17.826260
-            }
-        },
-        {
-            "meno": "Poprad",
-            "obyvatelia": 55210,
-            "souradnice": {
-                "sirka": 49.056766,
-                "dlzka": 20.293157
-            }
-        },
-        {
-            "meno": "Považská Bystrica",
-            "obyvatelia": 42722,
-            "souradnice": {
-                "sirka": 49.219485,
-                "dlzka": 18.443526
-            }
-        },
-        {
-            "meno": "Prešov",
-            "obyvatelia": 91320,
-            "souradnice": {
-                "sirka": 48.998465,
-                "dlzka": 21.240993
-            }
-        },
-        {
-            "meno": "Prievidza",
-            "obyvatelia": 50739,
-            "souradnice": {
-                "sirka": 48.777614,
-                "dlzka": 18.620066
-            }
-        },
-        {
-            "meno": "Revúca",
-            "obyvatelia": 17328,
-            "souradnice": {
-                "sirka": 48.696104,
-                "dlzka": 20.203056
-            }
-        },
-        {
-            "meno": "Rimavská Sobota",
-            "obyvatelia": 24223,
-            "souradnice": {
-                "sirka": 48.364654,
-                "dlzka": 19.818781
-            }
-        },
-        {
-            "meno": "Rožňava",
-            "obyvatelia": 19318,
-            "souradnice": {
-                "sirka": 48.658057,
-                "dlzka": 20.528257
-            }
-        },
-        {
-            "meno": "Ružomberok",
-            "obyvatelia": 29902,
-            "souradnice": {
-                "sirka": 49.080200,
-                "dlzka": 19.303249
-            }
-        },
-        {
-            "meno": "Sabinov",
-            "obyvatelia": 9731,
-            "souradnice": {
-                "sirka": 49.126824,
-                "dlzka": 21.089505
-            }
-        },
-        {
-            "meno": "Senec",
-            "obyvatelia": 23002,
-            "souradnice": {
-                "sirka": 48.205670,
-                "dlzka": 17.402968
-            }
-        },
-        {
-            "meno": "Senica",
-            "obyvatelia": 21757,
-            "souradnice": {
-                "sirka": 48.680095,
-                "dlzka": 17.364064
-            }
-        },
-        {
-            "meno": "Skalica",
-            "obyvatelia": 14584,
-            "souradnice": {
-                "sirka": 48.843695,
-                "dlzka": 17.228274
-            }
-        },
-        {
-            "meno": "Snina",
-            "obyvatelia": 18959,
-            "souradnice": {
-                "sirka": 48.997151,
-                "dlzka": 22.170924
-            }
-        },
-        {
-            "meno": "Sobrance",
-            "obyvatelia": 7061,
-            "souradnice": {
-                "sirka": 48.753983,
-                "dlzka": 22.180607
-            }
-        },
-        {
-            "meno": "Spišská Nová Ves",
-            "obyvatelia": 37377,
-            "souradnice": {
-                "sirka": 48.945075,
-                "dlzka": 20.593641
-            }
-        },
-        {
-            "meno": "Stará Ľubovňa",
-            "obyvatelia": 15942,
-            "souradnice": {
-                "sirka": 49.304144,
-                "dlzka": 20.689405
-            }
-        },
-        {
-            "meno": "Stropkov",
-            "obyvatelia": 11808,
-            "souradnice": {
-                "sirka": 49.207006,
-                "dlzka": 21.652614
-            }
-        },
-        {
-            "meno": "Svidník",
-            "obyvatelia": 12410,
-            "souradnice": {
-                "sirka": 49.303801,
-                "dlzka": 21.570552
-            }
-        },
-        {
-            "meno": "Topoľčany",
-            "obyvatelia": 27898,
-            "souradnice": {
-                "sirka": 48.758842,
-                "dlzka": 18.167509
-            }
-        },
-        {
-            "meno": "Trebišov",
-            "obyvatelia": 21630,
-            "souradnice": {
-                "sirka": 48.620142,
-                "dlzka": 21.718529
-            }
-        },
-        {
-            "meno": "Trenčín",
-            "obyvatelia": 56660,
-            "souradnice": {
-                "sirka": 48.886283,
-                "dlzka": 18.044997
-            }
-        },
-        {
-            "meno": "Trnava",
-            "obyvatelia": 67249,
-            "souradnice": {
-                "sirka": 48.378290,
-                "dlzka": 17.593018
-            }
-        },
-        {
-            "meno": "Turčianske Teplice",
-            "obyvatelia": 8204,
-            "souradnice": {
-                "sirka": 48.883220,
-                "dlzka": 18.859880
-            }
-        },
-        {
-            "meno": "Tvrdošín",
-            "obyvatelia": 9561,
-            "souradnice": {
-                "sirka": 49.439939,
-                "dlzka": 19.537628
-            }
-        },
-        {
-            "meno": "Veľký Krtíš",
-            "obyvatelia": 10285,
-            "souradnice": {
-                "sirka": 48.209975,
-                "dlzka": 19.299285
-            }
-        },
-        {
-            "meno": "Vranov nad Topľou",
-            "obyvatelia": 22984,
-            "souradnice": {
-                "sirka": 48.891528,
-                "dlzka": 21.682903
-            }
-        },
-        {
-            "meno": "Žarnovica",
-            "obyvatelia": 10786,
-            "souradnice": {
-                "sirka": 48.407486,
-                "dlzka": 18.715631
-            }
-        },
-        {
-            "meno": "Žiar nad Hronom",
-            "obyvatelia": 31888,
-            "souradnice": {
-                "sirka": 48.664613,
-                "dlzka": 18.925082
-            }
-        },
-        {
-            "meno": "Žilina",
-            "obyvatelia": 80031,
-            "souradnice": {
-                "sirka": 49.219740,
-                "dlzka": 18.739580
-            }
+[
+    {
+        "meno": "Bratislava",
+        "obyvatelia": 437725,
+        "psc": "81101",
+        "coordinates": {
+            "latitude": 48.148598,
+            "longitude": 17.107748
         }
-    ]
-}
+    },
+    {
+        "meno": "Košice",
+        "obyvatelia": 240688,
+        "psc": "04001",
+        "coordinates": {
+            "latitude": 48.721139,
+            "longitude": 21.257041
+        }
+    },
+    {
+        "meno": "Prešov",
+        "obyvatelia": 91576,
+        "psc": "08XXX",
+        "coordinates": {
+            "latitude": 49.000169,
+            "longitude": 21.239505
+        }
+    },
+    {
+        "meno": "Žilina",
+        "obyvatelia": 80259,
+        "psc": "01XXX",
+        "coordinates": {
+            "latitude": 49.225405,
+            "longitude": 18.740438
+        }
+    },
+    {
+        "meno": "Banská Bystrica",
+        "obyvatelia": 78862,
+        "psc": "97XXX",
+        "coordinates": {
+            "latitude": 48.736129,
+            "longitude": 19.148956
+        }
+    },
+    {
+        "meno": "Nitra",
+        "obyvatelia": 76104,
+        "psc": "94XXX",
+        "coordinates": {
+            "latitude": 48.306160,
+            "longitude": 18.084499
+        }
+    },
+    {
+        "meno": "Trnava",
+        "obyvatelia": 66673,
+        "psc": "91XXX",
+        "coordinates": {
+            "latitude": 48.377415,
+            "longitude": 17.587270
+        }
+    },
+    {
+        "meno": "Trenčín",
+        "obyvatelia": 56579,
+        "psc": "91XXX",
+        "coordinates": {
+            "latitude": 48.894563,
+            "longitude": 18.044751
+        }
+    }
+]

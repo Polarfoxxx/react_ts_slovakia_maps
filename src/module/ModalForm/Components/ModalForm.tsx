@@ -1,20 +1,51 @@
 
+import { type } from 'os';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { useForm, SubmitHandler } from "react-hook-form";
+import cites from "../../utils/cities.json"
 
 type Props = {
     show: boolean,
     setShow: React.Dispatch<React.SetStateAction<boolean>>
 }
+type TypeCitesObject = {
+    meno: string,
+    psc: string,
+    obyvatelia: number,
+    coordinates: {
+        latitude: number,
+        longitude: number
+    }
+}
+
+const defCitiesObject = {
+    meno: "",
+    psc: "",
+    obyvatelia: 0,
+    coordinates: {
+        latitude: 0,
+        longitude: 0
+    }
+}
+
+type TypeInput = {
+    register: string
+}
 
 function ModalForm({ show, setShow }: Props) {
+    const [ filterCities, setFilterCities ] = React.useState<TypeCitesObject>()
     const handleClose = () => setShow(false);
+    const { register, handleSubmit, reset } = useForm<TypeInput>()
 
-    const handleMumberOfInhabitants = (event: React.MouseEvent<HTMLButtonElement>): void => {
-        console.log("dd");
-
+    const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
+        const filter = cites.filter((item: TypeCitesObject) => item.psc === data.register);
+        setFilterCities(filter[0])
+      console.log(filter[0]);
+      
+        
     }
 
     return (
@@ -24,13 +55,14 @@ function ModalForm({ show, setShow }: Props) {
                     <Modal.Title>Search the city</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
+                    <Form onSubmit={handleSubmit(handleSubmitFrominput)}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Postal Code</Form.Label>
                             <Form.Control
-                                type="email"
+                                type="search"
                                 placeholder="code"
                                 autoFocus
+                                {...register("register")}
                             />
                         </Form.Group>
                         <Form.Group
@@ -38,7 +70,10 @@ function ModalForm({ show, setShow }: Props) {
                             controlId="exampleForm.ControlTextarea1"
                         >
                             <Form.Label>Mumber of inhabitants</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
+                            <Form.Control 
+                            value={filterCities?.meno}
+                            as="textarea" 
+                            rows={3} />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -46,7 +81,10 @@ function ModalForm({ show, setShow }: Props) {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleMumberOfInhabitants}>
+                    <Button variant="secondary" onClick={() => reset()}>
+                        Reset
+                    </Button>
+                    <Button variant="primary" onClick={handleSubmit(handleSubmitFrominput)}>
                         Submit
                     </Button>
                 </Modal.Footer>
