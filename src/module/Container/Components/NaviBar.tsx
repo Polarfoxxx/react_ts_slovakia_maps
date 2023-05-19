@@ -1,5 +1,6 @@
 import React from "react"
 import "../style/Navibar.style.css"
+import { ModalForm } from "../../ModalForm";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,11 +10,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 type Props = {
   setIndex: React.Dispatch<React.SetStateAction<number>>
-  setShow: React.Dispatch<React.SetStateAction<boolean>>
   index: number
 }
 
-function NaviBar({ setIndex, index, setShow }: Props): JSX.Element {
+function NaviBar({ setIndex, index }: Props): JSX.Element {
+  const [show, setShow] = React.useState(false);
 
 
   /* funkcia pre zmenu indexu pre zmenu zobrazenia componentov */
@@ -23,6 +24,7 @@ function NaviBar({ setIndex, index, setShow }: Props): JSX.Element {
   }
 
   return (
+    <>
       <div className="navBarContainer">
         <Navbar className="navbar" bg="black" variant="dark">
           <Container>
@@ -35,6 +37,12 @@ function NaviBar({ setIndex, index, setShow }: Props): JSX.Element {
           </Container>
         </Navbar>
       </div>
+      <div className="modalForm">
+        <ModalForm
+          show={show}
+          setShow={setShow} />
+      </div>
+    </>
   )
 }
 

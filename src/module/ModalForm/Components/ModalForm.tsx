@@ -1,5 +1,4 @@
 
-import { type } from 'os';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -36,16 +35,25 @@ type TypeInput = {
 }
 
 function ModalForm({ show, setShow }: Props) {
-    const [ filterCities, setFilterCities ] = React.useState<TypeCitesObject>()
-    const handleClose = () => setShow(false);
+    const [filterCities, setFilterCities] = React.useState<TypeCitesObject>()
     const { register, handleSubmit, reset } = useForm<TypeInput>()
+
+    const handleClose = (): void => {
+        setShow(false)
+        reset()
+        setFilterCities(defCitiesObject)
+    }
 
     const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
         const filter = cites.filter((item: TypeCitesObject) => item.psc === data.register);
-        setFilterCities(filter[0])
-      console.log(filter[0]);
-      
-        
+        if (filter[0] !== undefined) {
+            setFilterCities(filter[0])
+        } else {
+            alert("cities no exist")
+        }
+        console.log(filter[0]);
+
+
     }
 
     return (
@@ -70,10 +78,10 @@ function ModalForm({ show, setShow }: Props) {
                             controlId="exampleForm.ControlTextarea1"
                         >
                             <Form.Label>Mumber of inhabitants</Form.Label>
-                            <Form.Control 
-                            value={filterCities?.meno}
-                            as="textarea" 
-                            rows={3} />
+                            <Form.Control
+                                value={filterCities?.obyvatelia}
+                                as="textarea"
+                                rows={1} />
                         </Form.Group>
                     </Form>
                 </Modal.Body>

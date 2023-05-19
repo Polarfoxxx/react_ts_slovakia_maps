@@ -4,12 +4,10 @@ import { Container } from './module/Container';
 import { NaviBar } from './module/Container';
 import { Maps } from './module/Maps';
 import { Table } from './module/Table';
-import { ModalForm } from './module/ModalForm';
 
 
 function App(): JSX.Element {
   const [index, setIndex] = React.useState(0)
-  const [show, setShow] = React.useState(false);
   let components: JSX.Element | JSX.Element[] = []
 
   /* prepinanie zobrazenia componentov */
@@ -24,19 +22,15 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <ModalForm
-        show={show}
-        setShow={setShow} />
       <div className='navbar'>
         <NaviBar
-          setShow={setShow}
           setIndex={setIndex}
           index={index} />
       </div>
       <div className='content'>
-        <Container >
+        <Container.Provider >
           {components}
-        </Container>
+        </Container.Provider>
       </div>
     </div>
   );
