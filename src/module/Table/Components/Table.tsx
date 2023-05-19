@@ -1,59 +1,34 @@
 import React from "react"
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
+import citiesJSON from "../../utils/cities.json"
+import { TypeCitesObject } from "../../Container/types"
 
-type Person = {
-    cityName: string
-    people: number
-    country: string
 
-}
-
-const defaultData: Person[] = [
-    {
-        cityName: 'London',
-        people: 4545456,
-        country: "Slovakia",
-
-    },
-    {
-        cityName: 'Skalica',
-        people: 4545456,
-        country: "Slovakia",
-
-    },
-    {
-        cityName: 'Poprad',
-        people: 4545456,
-        country: "Slovakia",
-
-    },
-]
-const columnHelper = createColumnHelper<Person>()
+const columnHelper = createColumnHelper<TypeCitesObject>()
 const columns = [
-    columnHelper.accessor('cityName', {
+    columnHelper.accessor('mesto', {
         cell: info => info.getValue(),
     }),
-    columnHelper.accessor(row => row.people, {
-        id: 'lastName',
+    columnHelper.accessor(row => row.pocetObyvatelov, {
+        id: 'obyvatelia',
         cell: info => <i>{info.getValue()}</i>,
         header: () => <span>people</span>,
     }),
-    columnHelper.accessor('country', {
-        header: () => 'Age',
+    columnHelper.accessor('psc', {
+        header: () => 'psc',
         cell: info => info.renderValue(),
     }),
 ]
 
 
 function Table(): JSX.Element {
-    const [data, setData] = React.useState(() => [...defaultData])
+    const [data, setData] = React.useState(() => [...citiesJSON])
     const rerender = React.useReducer(() => ({}), {})[1]
 
-const handleTable = () => {
-    console.log("rrrjn");
-    
-}
 
+const handleTable = (event: React.MouseEvent<HTMLElement>) => {
+    console.log(event.target)
+}
 
     const table = useReactTable({
         data,

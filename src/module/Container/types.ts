@@ -1,21 +1,30 @@
 
 
 export type TypeCitesObject = {
-    meno: string,
+    mesto: string,
+    pocetObyvatelov: number,
     psc: string,
-    obyvatelia: number,
+    select: boolean
+    krajske: boolean,
     coordinates: {
-        latitude: number,
-        longitude: number
-    }
+        latitude: number
+        longitude: number,
+    },
 }
 
 export type TypeCitesArray = {
-    meno: string,
+    mesto: string,
+    pocetObyvatelov: number,
     psc: string,
-    obyvatelia: number,
+    select: boolean
+    krajske: boolean,
     coordinates: {
-        latitude: number,
-        longitude: number
-    }
+        latitude: number
+        longitude: number,
+    },
 }[]
+
+export type TypeContextProvider = {
+    cities: TypeCitesArray,
+    setCities: React.Dispatch<React.SetStateAction<TypeCitesArray>>
+}

@@ -1,20 +1,17 @@
-import React, { SetStateAction } from "react";
+import React from "react";
 import "../style/Container.style.css"
-import citiesJSON from "../../utils/cities.json"
+
 import { TypeCitesArray } from "../types";
-import { type } from "os";
+import { TypeContextProvider } from "../types";
+
+import citiesJSON from "../../utils/cities.json"
+
+
+
 
 type Props = {
     children: JSX.Element | JSX.Element[]
 }
-
-
-
-type TypeContextProvider = {
-    cities: TypeCitesArray,
-    setCities: React.Dispatch<SetStateAction<TypeCitesArray>>
-}
-
 const Context = React.createContext<TypeContextProvider>({
     cities: [],
     setCities: () => { }
@@ -22,7 +19,7 @@ const Context = React.createContext<TypeContextProvider>({
 
 
 function Provider({ children }: Props): JSX.Element {
-    const [cities, setCities] = React.useState<TypeCitesArray>([])
+    const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
 
     return (
         <div className="container">

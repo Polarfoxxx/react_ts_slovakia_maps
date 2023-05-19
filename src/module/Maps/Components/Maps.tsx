@@ -3,45 +3,49 @@ import "../style/Maps.style.css"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from 'leaflet';
-import cites from "../../utils/cities.json"
+import citiesJSON from "../../utils/cities.json"
+import { Container } from "../../Container";
 
-type TypeCitesObject = {
-    meno: string,
-    psc: string,
-    obyvatelia: number,
-    coordinates: {
-        latitude: number,
-        longitude: number
-    }
-}
-type TypeCitiesArray = {
-    meno: string,
-    psc: string,
-    obyvatelia: number,
-    coordinates: {
-        latitude: number,
-        longitude: number
-    }
-}[]
+import { TypeCitesArray } from "../../Container/types";
+import { TypeCitesObject } from "../../Container/types";
+
+
+
+
 
 function Maps(): JSX.Element {
-    const [allcities, setAllcities] = React.useState<TypeCitiesArray>([])
+    const [allcities, setAllcities] = React.useState<TypeCitesArray>([])
+    const { setCities, cities } = React.useContext(Container.Context)
+    let newCityArray: TypeCitesArray = []
 
     /* nastavenie zoznamu vsetkych miest */
     React.useEffect(() => {
-        setAllcities(cites)
+        setAllcities(citiesJSON)
     }, [])
 
-
-    /* funkcia po kliknuti na marker */
-    const handleMarkerClick = (cities: TypeCitesObject) => {
-        console.log(cities);
-
+    /* funkcia po kliknuti na marker oznacenie selectoru v objekte*/
+    const handleMarkerClick = (city: TypeCitesObject) => {
+        cities.forEach((item: TypeCitesObject) => {
+            if (item.mesto === city.mesto) {
+                item.select = true
+            } else {item.select = false }
+            newCityArray.push(item)
+        })
+        setCities(newCityArray)
     }
+
+
     /* create marker icon */
-    const customIcon = new Icon({
+
+
+    const normalIcon = new Icon({
         iconUrl: '/img/marker.png',
         iconSize: [30, 30],
+    });
+
+    const largeIcon = new Icon({
+        iconUrl: '/img/marker.png',
+        iconSize: [60, 60],
     });
 
     return (
@@ -52,14 +56,14 @@ function Maps(): JSX.Element {
                 scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 {
-                    allcities.map((cities: TypeCitesObject, index: number) => (
+                    allcities.map((city: TypeCitesObject, index: number) => (
                         <Marker
                             key={index}
-                            position={[cities.coordinates.latitude, cities.coordinates.longitude]}
-                            eventHandlers={{ click: (e) => { handleMarkerClick(cities) } }}
-                            icon={customIcon}>
+                            position={[city.coordinates.latitude, city.coordinates.longitude]}
+                            eventHandlers={{ click: (e) => { handleMarkerClick(city) } }}
+                            icon={city.krajske ? largeIcon : normalIcon}>
                         </Marker>
                     ))
                 }

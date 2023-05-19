@@ -5,29 +5,25 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { useForm, SubmitHandler } from "react-hook-form";
 import cites from "../../utils/cities.json"
+import { TypeCitesObject } from '../../Container/types';
+
+
+const defCitiesObject = {
+    "mesto": "",
+    "pocetObyvatelov": 0,
+    "psc": "",
+    "select": false,
+    "krajske": false,
+    "coordinates": {
+        "latitude": 0,
+        "longitude": 0
+}
+}
+
 
 type Props = {
     show: boolean,
     setShow: React.Dispatch<React.SetStateAction<boolean>>
-}
-type TypeCitesObject = {
-    meno: string,
-    psc: string,
-    obyvatelia: number,
-    coordinates: {
-        latitude: number,
-        longitude: number
-    }
-}
-
-const defCitiesObject = {
-    meno: "",
-    psc: "",
-    obyvatelia: 0,
-    coordinates: {
-        latitude: 0,
-        longitude: 0
-    }
 }
 
 type TypeInput = {
@@ -52,7 +48,6 @@ function ModalForm({ show, setShow }: Props) {
             alert("cities no exist")
         }
         console.log(filter[0]);
-
 
     }
 
@@ -79,7 +74,7 @@ function ModalForm({ show, setShow }: Props) {
                         >
                             <Form.Label>Mumber of inhabitants</Form.Label>
                             <Form.Control
-                                value={filterCities?.obyvatelia}
+                                value={filterCities?.pocetObyvatelov}
                                 as="textarea"
                                 rows={1} />
                         </Form.Group>
