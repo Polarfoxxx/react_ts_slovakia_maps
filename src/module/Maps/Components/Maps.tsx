@@ -11,6 +11,10 @@ import { TypeCitesObject } from "../../Container/types";
 
 
 
+type TypeIcon = {
+    iconUrl: string,
+    iconSize: [number, number],
+}
 
 
 function Maps(): JSX.Element {
@@ -28,7 +32,7 @@ function Maps(): JSX.Element {
         cities.forEach((item: TypeCitesObject) => {
             if (item.mesto === city.mesto) {
                 item.select = true
-            } else {item.select = false }
+            } else { item.select = false }
             newCityArray.push(item)
         })
         setCities(newCityArray)
@@ -36,17 +40,24 @@ function Maps(): JSX.Element {
 
 
     /* create marker icon */
-
-
-    const normalIcon = new Icon({
-        iconUrl: '/img/marker.png',
+    const normalIcon: Icon<TypeIcon> = new Icon({
+        iconUrl: '/img/location-marker.png',
         iconSize: [30, 30],
     });
 
-    const largeIcon = new Icon({
-        iconUrl: '/img/marker.png',
-        iconSize: [60, 60],
+    const largeIcon: Icon<TypeIcon> = new Icon({
+        iconUrl: '/img/location-marker.png',
+        iconSize: [50, 50],
     });
+
+    const selectIcon: Icon<TypeIcon> = new Icon({
+        iconUrl: '/img/select Marker.png',
+        iconSize: [45, 70],
+    });
+
+    const iconType = (city: TypeCitesObject): Icon<TypeIcon> =>
+        city.krajske ? (city.select ? selectIcon : largeIcon) : (city.select ? selectIcon : normalIcon);
+
 
     return (
         <div className="maps">
@@ -63,7 +74,7 @@ function Maps(): JSX.Element {
                             key={index}
                             position={[city.coordinates.latitude, city.coordinates.longitude]}
                             eventHandlers={{ click: (e) => { handleMarkerClick(city) } }}
-                            icon={city.krajske ? largeIcon : normalIcon}>
+                            icon={iconType(city)}>
                         </Marker>
                     ))
                 }

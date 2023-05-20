@@ -1,13 +1,42 @@
 import React from "react"
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import citiesJSON from "../../utils/cities.json"
+import { Container } from "../../Container"
 import { TypeCitesObject } from "../../Container/types"
+import { TypeCitesArray } from "../../Container/types"
+
+
+
+function Table(): JSX.Element {
+    const [data, setData] = React.useState(() => [...citiesJSON])
+    const rerender = React.useReducer(() => ({}), {})[1]
+    const { setCities, cities } = React.useContext(Container.Context)
+    let newCityArray: TypeCitesArray = []
+
+
+const handleTable = ( id: string ): void => {
+    cities.forEach((item: TypeCitesObject) => {
+        if (item.mesto === id) {
+            item.select = true
+        } else {item.select = false }
+        
+        newCityArray.push(item)
+    })
+    setCities(newCityArray)
+}
+console.log(newCityArray);
+
+
+
+
 
 
 const columnHelper = createColumnHelper<TypeCitesObject>()
 const columns = [
     columnHelper.accessor('mesto', {
-        cell: info => info.getValue(),
+        id: 'mesto',
+        cell: info => <i onClick={(id) => {handleTable(info.getValue())}} style={{cursor: "pointer"}}>{info.getValue()}</i>,
+        header: () => <span>mesto</span>,
     }),
     columnHelper.accessor(row => row.pocetObyvatelov, {
         id: 'obyvatelia',
@@ -19,16 +48,6 @@ const columns = [
         cell: info => info.renderValue(),
     }),
 ]
-
-
-function Table(): JSX.Element {
-    const [data, setData] = React.useState(() => [...citiesJSON])
-    const rerender = React.useReducer(() => ({}), {})[1]
-
-
-const handleTable = (event: React.MouseEvent<HTMLElement>) => {
-    console.log(event.target)
-}
 
     const table = useReactTable({
         data,
@@ -60,8 +79,6 @@ const handleTable = (event: React.MouseEvent<HTMLElement>) => {
                         <tr key={row.id}>
                             {row.getVisibleCells().map(cell => (
                                 <td
-                                style={{cursor: "pointer"}}
-                                onClick={handleTable}
                                 key={cell.id}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                 </td>
