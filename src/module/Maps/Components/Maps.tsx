@@ -27,7 +27,7 @@ function Maps(): JSX.Element {
         setAllcities(citiesJSON)
     }, [])
 
-    /* funkcia po kliknuti na marker oznacenie selectoru v objekte*/
+    /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
     const handleMarkerClick = (city: TypeCitesObject) => {
         cities.forEach((item: TypeCitesObject) => {
             if (item.mesto === city.mesto) {
@@ -54,7 +54,7 @@ function Maps(): JSX.Element {
         iconUrl: '/img/select Marker.png',
         iconSize: [45, 70],
     });
-
+/* funkcia meniaca markery */
     const iconType = (city: TypeCitesObject): Icon<TypeIcon> =>
         city.krajske ? (city.select ? selectIcon : largeIcon) : (city.select ? selectIcon : normalIcon);
 

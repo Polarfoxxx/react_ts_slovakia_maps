@@ -8,27 +8,21 @@ import { TypeCitesArray } from "../../Container/types"
 
 
 function Table(): JSX.Element {
-    const [data, setData] = React.useState(() => [...citiesJSON])
-    const rerender = React.useReducer(() => ({}), {})[1]
     const { setCities, cities } = React.useContext(Container.Context)
+    const [data, setData] = React.useState(() => [...cities])
+    const rerender = React.useReducer(() => ({}), {})[1]
     let newCityArray: TypeCitesArray = []
 
-
+/* funkcia oznacenia mesta z JSONu..  */
 const handleTable = ( id: string ): void => {
     cities.forEach((item: TypeCitesObject) => {
         if (item.mesto === id) {
             item.select = true
         } else {item.select = false }
-        
         newCityArray.push(item)
     })
     setCities(newCityArray)
 }
-console.log(newCityArray);
-
-
-
-
 
 
 const columnHelper = createColumnHelper<TypeCitesObject>()
@@ -44,8 +38,9 @@ const columns = [
         header: () => <span>people</span>,
     }),
     columnHelper.accessor('psc', {
-        header: () => 'psc',
-        cell: info => info.renderValue(),
+        id: 'psc',
+        cell: info => <i>{info.getValue()}</i>,
+        header: () => <span>people</span>,
     }),
 ]
 
@@ -76,7 +71,9 @@ const columns = [
                 </thead>
                 <tbody>
                     {table.getRowModel().rows.map(row => (
-                        <tr key={row.id}>
+                        <tr key={row.id}
+                        style={{background: "red"}}
+                        >
                             {row.getVisibleCells().map(cell => (
                                 <td
                                 key={cell.id}>
