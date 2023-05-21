@@ -5,7 +5,6 @@ import { TypeCitesArray } from "../types";
 import { TypeContextProvider } from "../types";
 import { useTranslation } from 'react-i18next';
 import "../../../i18n"
-
 import citiesJSON from "../../utils/cities.json"
 
 
@@ -24,13 +23,17 @@ function Provider({ children }: Props): JSX.Element {
     const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
     const { t } = useTranslation();
 
-
     return (
-        <div className="container">
-           <h1>{t('greeting')}</h1>
-            <Context.Provider value={{ cities, setCities }}>
-                {children}
-            </Context.Provider>
+        <div className="containerApp">
+            <div className="containerHeader">
+                <h1>{t('greeting')}</h1>
+            </div>
+            <div className="containerContext">
+                <Context.Provider value={{ cities, setCities }}>
+                    {children}
+                </Context.Provider>
+            </div>
+
         </div>
     )
 }

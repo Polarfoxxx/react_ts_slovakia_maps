@@ -18,7 +18,7 @@ i18n
       },
       sk: {
         translation: {
-          greeting: "Ahoj!",
+          greeting: "Ahoj! ",
           language: "Jazyk",
           display: "Zobrazenie",
           SearchTheCity: "Hladaj mesto",
