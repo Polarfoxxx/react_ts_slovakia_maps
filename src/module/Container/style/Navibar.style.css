@@ -1,3 +1,14 @@
 .navBarContainer{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    padding-left: 50px;
+}
+.navbarTittle{
+    color: rgba(255, 255, 255, 0.678);
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 20px;
 }

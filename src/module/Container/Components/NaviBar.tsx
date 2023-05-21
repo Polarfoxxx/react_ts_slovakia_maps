@@ -1,12 +1,10 @@
 import React from "react"
 import "../style/Navibar.style.css"
 import { ModalForm } from "../../ModalForm";
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Button, ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap';
+import { useTranslation } from "react-i18next";
+import "../../../i18n"
 
 type Props = {
   setIndex: React.Dispatch<React.SetStateAction<number>>
@@ -15,6 +13,7 @@ type Props = {
 
 function NaviBar({ setIndex, index }: Props): JSX.Element {
   const [show, setShow] = React.useState(false);
+  const { i18n, t } = useTranslation()
 
 
   /* funkcia pre zmenu indexu pre zmenu zobrazenia componentov */
@@ -23,19 +22,22 @@ function NaviBar({ setIndex, index }: Props): JSX.Element {
     index === 2 && setIndex(0)
   }
 
+const changeLang = (lg: string): void => {
+  i18n.changeLanguage(lg)
+}
+
   return (
     <>
       <div className="navBarContainer">
-        <Navbar className="navbar" bg="black" variant="dark">
-          <Container>
-            <Navbar.Brand >Slovakia Maps</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link onClick={() => setShow(true)}>Form</Nav.Link>
-              <Nav.Link onClick={handleChangeLayout}>Layout</Nav.Link>
-              <Nav.Link>Language</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
+        <div className="navbarTittle">Slovakia Map</div>
+        <ButtonGroup>
+          <Button onClick={() => setShow(true)} variant="danger" >Form</Button>
+          <Button onClick={handleChangeLayout} variant="secondary" >{t('display')}</Button>
+          <DropdownButton as={ButtonGroup} variant="secondary" title={t('language')} id="bg-nested-dropdown">
+            <Dropdown.Item onClick={() => changeLang("sk")}>SK</Dropdown.Item>
+            <Dropdown.Item onClick={() => changeLang("en")}>EN</Dropdown.Item>
+          </DropdownButton>
+        </ButtonGroup>
       </div>
       <div className="modalForm">
         <ModalForm

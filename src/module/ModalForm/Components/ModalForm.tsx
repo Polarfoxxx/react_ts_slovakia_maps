@@ -6,7 +6,8 @@ import Modal from 'react-bootstrap/Modal';
 import { useForm, SubmitHandler } from "react-hook-form";
 import cites from "../../utils/cities.json"
 import { TypeCitesObject } from '../../Container/types';
-
+import "../../../i18n"
+import { useTranslation } from 'react-i18next';
 
 const defCitiesObject = {
     "mesto": "",
@@ -17,8 +18,7 @@ const defCitiesObject = {
     "coordinates": {
         "latitude": 0,
         "longitude": 0
-}
-}
+}}
 
 
 type Props = {
@@ -33,6 +33,7 @@ type TypeInput = {
 function ModalForm({ show, setShow }: Props) {
     const [filterCities, setFilterCities] = React.useState<TypeCitesObject>()
     const { register, handleSubmit, reset } = useForm<TypeInput>()
+    const { t } = useTranslation()
 
     const handleClose = (): void => {
         setShow(false)
@@ -55,12 +56,12 @@ function ModalForm({ show, setShow }: Props) {
         <>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Search the city</Modal.Title>
+                    <Modal.Title>{t("SearchTheCity")}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit(handleSubmitFrominput)}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Postal Code</Form.Label>
+                            <Form.Label>{t("postalCode")}</Form.Label>
                             <Form.Control
                                 type="search"
                                 placeholder="code"
@@ -72,7 +73,7 @@ function ModalForm({ show, setShow }: Props) {
                             className="mb-3"
                             controlId="exampleForm.ControlTextarea1"
                         >
-                            <Form.Label>Mumber of inhabitants</Form.Label>
+                            <Form.Label>{t("numberOfInhabitants")}</Form.Label>
                             <Form.Control
                                 value={filterCities?.pocetObyvatelov}
                                 as="textarea"
