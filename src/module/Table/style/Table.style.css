@@ -1,0 +1,40 @@
+
+.tables{
+    width: 60%;
+    max-height: 100%;
+    overflow-x: auto;
+}
+.tables .tableBox{
+    width: 100%;
+    height: 100%;
+}
+.tableBox .tableHead{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(38, 41, 33);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+.tableBox .tableHead .tableHeadBox{
+    width: 100%;
+    height: 100%;
+}
+.tableBox .tableHead .tableHeadBox .tableHeadBoxTittle{
+    height: 100%;
+    padding-left: 20px;
+}
+.tables .tableBox .tableBody{
+    width: 90px;
+    height: 400px;
+}
+.tables .tableBox .tableBody .tabRows{
+    width: 90%;
+    color: white;
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+    cursor: pointer;
+}
+.tables .tableBox .tableBody .tabRows .block{
+    padding-left: 25px;
+}

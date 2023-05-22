@@ -1,4 +1,5 @@
 import React from "react"
+import "../style/Table.style.css"
 import citiesJSON from "../../utils/cities.json"
 import { Container } from "../../Container"
 import { TypeCitesObject } from "../../Container/types"
@@ -22,28 +23,31 @@ function Table(): JSX.Element {
     }
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                {cities.map((item: TypeCitesObject, index: number) => (
-                    <tr 
-                    className="tabRows"
-                    style={{backgroundColor: item.select ? "orange" : "black"}}
-                    key={index}
-                    onClick={() => handleTable(item.mesto)}>
-                        <td>{item.mesto}</td>
-                        <td>{item.pocetObyvatelov}</td>
-                        <td>{item.psc}</td>
+        <div className="tables">
+            <table className="tableBox">
+                <thead className="tableHead">
+                    <tr className="tableHeadBox">
+                        <th className="tableHeadBoxTittle">City</th>
+                        <th>Residents</th>
+                        <th>Code</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody className="tableBody">
+                    {cities.map((item: TypeCitesObject, index: number) => (
+                        <tr
+                            className="tabRows"
+                            style={{ backgroundColor: item.select ? "orange" : "black" }}
+                            key={index}
+                            onClick={() => handleTable(item.mesto)}>
+                            <td className="block">{item.mesto}</td>
+                            <td>{item.pocetObyvatelov}</td>
+                            <td>{item.psc}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+
     );
 }
 
