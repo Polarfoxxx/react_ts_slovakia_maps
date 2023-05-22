@@ -18,7 +18,8 @@ const defCitiesObject = {
     "coordinates": {
         "latitude": 0,
         "longitude": 0
-}}
+    }
+}
 
 
 type Props = {
@@ -42,7 +43,7 @@ function ModalForm({ show, setShow }: Props) {
     }
 
     const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
-        const filter = cites.filter((item: TypeCitesObject) => item.psc === data.register);
+        const filter = cites.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.register);
         if (filter[0] !== undefined) {
             setFilterCities(filter[0])
         } else {
@@ -85,7 +86,7 @@ function ModalForm({ show, setShow }: Props) {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="secondary" onClick={() => reset()}>
+                    <Button variant="secondary" onClick={() => {reset(); setFilterCities(defCitiesObject)}}>
                         Reset
                     </Button>
                     <Button variant="primary" onClick={handleSubmit(handleSubmitFrominput)}>

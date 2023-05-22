@@ -22,4 +22,17 @@
     justify-content: center;
     flex-direction: row;
 }
+.containerApp .ressetBtn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 5;
+}
+.containerApp .ressetBtn > button{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    border-radius: 20px;
+}
+
 

@@ -21,6 +21,8 @@ function Maps(): JSX.Element {
     const [allcities, setAllcities] = React.useState<TypeCitesArray>([])
     const { setCities, cities } = React.useContext(Container.Context)
     let newCityArray: TypeCitesArray = []
+    console.log("map");
+    
 
     /* nastavenie zoznamu vsetkych miest */
     React.useEffect(() => {
@@ -80,6 +82,7 @@ function Maps(): JSX.Element {
                 }
             </MapContainer>
         </div>
+        
     )
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import "../style/Container.style.css"
 
 import { TypeCitesArray } from "../types";
+import { TypeCitesObject } from "../types";
 import { TypeContextProvider } from "../types";
 import { useTranslation } from 'react-i18next';
 import "../../../i18n"
@@ -23,6 +24,18 @@ function Provider({ children }: Props): JSX.Element {
     const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
     const { t } = useTranslation();
 
+    /* reset button */
+    const handleRessetButton = (): void => {
+        let resetArray: TypeCitesArray = []
+        cities.map((item: TypeCitesObject) => {
+            item.select = false
+            resetArray.push(item)
+        })
+        setCities(resetArray)
+    }
+
+
+
     return (
         <div className="containerApp">
             <div className="containerHeader">
@@ -32,6 +45,13 @@ function Provider({ children }: Props): JSX.Element {
                 <Context.Provider value={{ cities, setCities }}>
                     {children}
                 </Context.Provider>
+            </div>
+            <div className="ressetBtn">
+                <button
+                    onClick={handleRessetButton}
+                    className="resetButton">
+                    Reset
+                </button>
             </div>
 
         </div>

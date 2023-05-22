@@ -46,6 +46,7 @@ function Table(): JSX.Element {
                     ))}
                 </tbody>
             </table>
+            
         </div>
 
     );
