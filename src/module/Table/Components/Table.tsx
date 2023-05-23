@@ -1,6 +1,5 @@
 import React from "react"
 import "../style/Table.style.css"
-import citiesJSON from "../../utils/cities.json"
 import { Container } from "../../Container"
 import { TypeCitesObject } from "../../Container/types"
 import { TypeCitesArray } from "../../Container/types"
@@ -8,8 +7,20 @@ import { TypeCitesArray } from "../../Container/types"
 
 
 function Table(): JSX.Element {
+    const tableReff = React.useRef<HTMLDivElement>(null)
+    const cellReff = React.useRef<HTMLTableRowElement>(null)
     const { setCities, cities } = React.useContext(Container.Context)
     let newCityArray: TypeCitesArray = []
+
+/* auto scrool by selecte */
+    React.useEffect(() => {
+        if (tableReff.current && cellReff.current) {
+            const rowPosition = cellReff.current.offsetTop - tableReff.current.offsetTop;
+            tableReff.current.scrollTop = rowPosition;
+        }
+    }, [cities])
+
+
 
     /* funkcia oznacenia mesta z JSONu..  */
     const handleTable = (id: string): void => {
@@ -23,8 +34,10 @@ function Table(): JSX.Element {
     }
 
     return (
-        <div className="tables">
-            <table className="tableBox">
+        <div className="tables"
+            ref={tableReff}>
+            <table
+                className="tableBox">
                 <thead className="tableHead">
                     <tr className="tableHeadBox">
                         <th className="tableHeadBoxTittle">City</th>
@@ -35,6 +48,7 @@ function Table(): JSX.Element {
                 <tbody className="tableBody">
                     {cities.map((item: TypeCitesObject, index: number) => (
                         <tr
+                            ref={item.select ? cellReff : null}
                             className="tabRows"
                             style={{ backgroundColor: item.select ? "orange" : "black" }}
                             key={index}
@@ -46,7 +60,7 @@ function Table(): JSX.Element {
                     ))}
                 </tbody>
             </table>
-            
+
         </div>
 
     );

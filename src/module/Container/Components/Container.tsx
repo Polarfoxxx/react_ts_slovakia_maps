@@ -21,6 +21,7 @@ const Context = React.createContext<TypeContextProvider>({
 
 
 function Provider({ children }: Props): JSX.Element {
+   
     const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
     const { t } = useTranslation();
 
