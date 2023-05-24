@@ -23,9 +23,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <div className='navbar'>
-        <NaviBar
-          setIndex={setIndex}
-          index={index} />
+        <NaviBar setIndex={setIndex} index={index} />
       </div>
       <div className='content'>
         <Container.Provider >

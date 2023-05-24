@@ -4,7 +4,7 @@ import { ModalForm } from "../../ModalForm";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap';
 import { useTranslation } from "react-i18next";
-import "../../../i18n"
+import "../../utils/i18n"
 
 type Props = {
   setIndex: React.Dispatch<React.SetStateAction<number>>

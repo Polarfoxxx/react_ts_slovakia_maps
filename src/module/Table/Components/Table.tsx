@@ -2,7 +2,9 @@ import React from "react"
 import "../style/Table.style.css"
 import { Container } from "../../Container"
 import { TypeCitesObject } from "../../Container/types"
-import { TypeCitesArray } from "../../Container/types"
+import { useTranslation } from "react-i18next"
+import "../../utils/i18n"
+import servicesObjectDesignationFromJSON from "../services"
 
 
 
@@ -10,7 +12,7 @@ function Table(): JSX.Element {
     const tableReff = React.useRef<HTMLDivElement>(null)
     const cellReff = React.useRef<HTMLTableRowElement>(null)
     const { setCities, cities } = React.useContext(Container.Context)
-    let newCityArray: TypeCitesArray = []
+    const { t } = useTranslation()
 
 /* auto scrool by selecte */
     React.useEffect(() => {
@@ -21,16 +23,9 @@ function Table(): JSX.Element {
     }, [cities])
 
 
-
     /* funkcia oznacenia mesta z JSONu..  */
-    const handleTable = (id: string): void => {
-        cities.forEach((item: TypeCitesObject) => {
-            if (item.mesto === id) {
-                item.select = true
-            } else { item.select = false }
-            newCityArray.push(item)
-        })
-        setCities(newCityArray)
+    const handleTable = (cities: string, e: React.MouseEvent<HTMLElement>): void => {
+        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(cities))
     }
 
     return (
@@ -40,9 +35,9 @@ function Table(): JSX.Element {
                 className="tableBox">
                 <thead className="tableHead">
                     <tr className="tableHeadBox">
-                        <th className="tableHeadBoxTittle">City</th>
-                        <th>Residents</th>
-                        <th>Code</th>
+                        <th className="tableHeadBoxTittle">{t("city")}</th>
+                        <th>{t("residents")}</th>
+                        <th>{t("code")}</th>
                     </tr>
                 </thead>
                 <tbody className="tableBody">
@@ -52,7 +47,7 @@ function Table(): JSX.Element {
                             className="tabRows"
                             style={{ backgroundColor: item.select ? "orange" : "black" }}
                             key={index}
-                            onClick={() => handleTable(item.mesto)}>
+                            onClick={(e) => handleTable(item.mesto, e)}>
                             <td className="block">{item.mesto}</td>
                             <td>{item.pocetObyvatelov}</td>
                             <td>{item.psc}</td>

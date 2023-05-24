@@ -1,27 +1,19 @@
 import React from "react";
 import "../style/Container.style.css"
-
 import { TypeCitesArray } from "../types";
 import { TypeCitesObject } from "../types";
 import { TypeContextProvider } from "../types";
 import { useTranslation } from 'react-i18next';
-import "../../../i18n"
+import "../../utils/i18n"
 import citiesJSON from "../../utils/cities.json"
+import { Props } from "../types";
 
-
-
-
-type Props = {
-    children: JSX.Element | JSX.Element[]
-}
 const Context = React.createContext<TypeContextProvider>({
     cities: [],
     setCities: () => { }
 })
 
-
 function Provider({ children }: Props): JSX.Element {
-   
     const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
     const { t } = useTranslation();
 

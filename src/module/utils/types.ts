@@ -1,15 +1,11 @@
-
-
-export type Props = {
-    children: JSX.Element | JSX.Element[]
-}
-
-
 export type TypeCitesObject = {
     mesto: string,
     pocetObyvatelov: number,
     psc: string,
-    select: boolean
+    select: {
+        type: boolean,
+        target: string
+    }
     krajske: boolean,
     coordinates: {
         latitude: number
@@ -28,8 +24,3 @@ export type TypeCitesArray = {
         longitude: number,
     },
 }[]
-
-export type TypeContextProvider = {
-    cities: TypeCitesArray,
-    setCities: React.Dispatch<React.SetStateAction<TypeCitesArray>>
-}

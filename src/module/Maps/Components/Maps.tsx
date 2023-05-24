@@ -5,24 +5,15 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from 'leaflet';
 import citiesJSON from "../../utils/cities.json"
 import { Container } from "../../Container";
-
+import { TypeIcon } from "../type";
 import { TypeCitesArray } from "../../Container/types";
 import { TypeCitesObject } from "../../Container/types";
-
-
-
-type TypeIcon = {
-    iconUrl: string,
-    iconSize: [number, number],
-}
+import servicesObjectDesignationFromJSON from "../../Table/services";
 
 
 function Maps(): JSX.Element {
     const [allcities, setAllcities] = React.useState<TypeCitesArray>([])
-    const { setCities, cities } = React.useContext(Container.Context)
-    let newCityArray: TypeCitesArray = []
-    console.log("map");
-    
+    const { setCities } = React.useContext(Container.Context)
 
     /* nastavenie zoznamu vsetkych miest */
     React.useEffect(() => {
@@ -30,33 +21,24 @@ function Maps(): JSX.Element {
     }, [])
 
     /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
-    const handleMarkerClick = (city: TypeCitesObject) => {
-        cities.forEach((item: TypeCitesObject) => {
-            if (item.mesto === city.mesto) {
-                item.select = true
-            } else { item.select = false }
-            newCityArray.push(item)
-        })
-        setCities(newCityArray)
+    const handleMarkerClick = (city: string) => {
+        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(city))
     }
-
 
     /* create marker icon */
     const normalIcon: Icon<TypeIcon> = new Icon({
         iconUrl: '/img/location-marker.png',
         iconSize: [30, 30],
     });
-
     const largeIcon: Icon<TypeIcon> = new Icon({
         iconUrl: '/img/location-marker.png',
         iconSize: [50, 50],
     });
-
     const selectIcon: Icon<TypeIcon> = new Icon({
         iconUrl: '/img/select Marker.png',
         iconSize: [45, 70],
     });
-/* funkcia meniaca markery */
+    /* funkcia meniaca markery */
     const iconType = (city: TypeCitesObject): Icon<TypeIcon> =>
         city.krajske ? (city.select ? selectIcon : largeIcon) : (city.select ? selectIcon : normalIcon);
 
@@ -75,14 +57,17 @@ function Maps(): JSX.Element {
                         <Marker
                             key={index}
                             position={[city.coordinates.latitude, city.coordinates.longitude]}
-                            eventHandlers={{ click: (e) => { handleMarkerClick(city) } }}
+                            eventHandlers= {{click: (e) => {handleMarkerClick(city.mesto)}}}
                             icon={iconType(city)}>
+                                <Popup>
+                                    {city.mesto}
+                                </Popup>
                         </Marker>
                     ))
                 }
             </MapContainer>
         </div>
-        
+
     )
 }
 

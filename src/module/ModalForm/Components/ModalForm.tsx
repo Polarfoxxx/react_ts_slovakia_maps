@@ -6,42 +6,27 @@ import Modal from 'react-bootstrap/Modal';
 import { useForm, SubmitHandler } from "react-hook-form";
 import cites from "../../utils/cities.json"
 import { TypeCitesObject } from '../../Container/types';
-import "../../../i18n"
+import "../../utils/i18n"
 import { useTranslation } from 'react-i18next';
-
-const defCitiesObject = {
-    "mesto": "",
-    "pocetObyvatelov": 0,
-    "psc": "",
-    "select": false,
-    "krajske": false,
-    "coordinates": {
-        "latitude": 0,
-        "longitude": 0
-    }
-}
+import { Props } from '../type';
+import { TypeInput } from '../type';
+import { defCitiesObject } from '../defValue';
 
 
-type Props = {
-    show: boolean,
-    setShow: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-type TypeInput = {
-    register: string
-}
 
 function ModalForm({ show, setShow }: Props) {
     const [filterCities, setFilterCities] = React.useState<TypeCitesObject>()
     const { register, handleSubmit, reset } = useForm<TypeInput>()
     const { t } = useTranslation()
 
+    /* funckcie spustajuce sa vo modal forme */
     const handleClose = (): void => {
         setShow(false)
         reset()
         setFilterCities(defCitiesObject)
     }
 
+    /* on Submit */
     const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
         const filter = cites.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.register);
         if (filter[0] !== undefined) {
@@ -49,8 +34,6 @@ function ModalForm({ show, setShow }: Props) {
         } else {
             alert("cities no exist")
         }
-        console.log(filter[0]);
-
     }
 
     return (
@@ -86,7 +69,7 @@ function ModalForm({ show, setShow }: Props) {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="secondary" onClick={() => {reset(); setFilterCities(defCitiesObject)}}>
+                    <Button variant="secondary" onClick={() => { reset(); setFilterCities(defCitiesObject) }}>
                         Reset
                     </Button>
                     <Button variant="primary" onClick={handleSubmit(handleSubmitFrominput)}>

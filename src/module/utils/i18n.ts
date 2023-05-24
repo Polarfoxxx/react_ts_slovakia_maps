@@ -7,23 +7,29 @@ i18n
     resources: {
       en: {
         translation: {
-          greeting: "Hello!",
+          greeting: "Hi! Here you can find a map of the Slovak Republic and its regional and district cities",
           language: "Language",
           display: "Display",
           searchTheCity: "Search the city",
           postalCode: "Postal code",
           numberOfInhabitants: "Number of inhabitants",
+          city: "City",
+          residents: "Residents",
+          code: "Code",
           // další překlady...
         },
       },
       sk: {
         translation: {
-          greeting: "Ahoj! ",
+          greeting: "Ahoj! Tu sa nachachadza mapa Slovenskej Republiky a jej krajske a okresne mesta ",
           language: "Jazyk",
           display: "Zobrazenie",
           SearchTheCity: "Hladaj mesto",
           postalCode: "Postove smerovacie cislo",
           numberOfInhabitants: "Pocet obyvatelov",
+          city: "Mesto",
+          residents: "Obyvatelov",
+          code: "PSC",
           // další překlady...
         },
       },
