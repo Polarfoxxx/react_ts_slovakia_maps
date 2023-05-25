@@ -3,7 +3,6 @@
         "mesto": "Banská Bystrica",
         "pocetObyvatelov": 78881,
         "psc": "974 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.73583,
@@ -14,7 +13,6 @@
         "mesto": "Bardejov",
         "pocetObyvatelov": 32553,
         "psc": "085 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.29444,
@@ -25,7 +23,6 @@
         "mesto": "Bratislava I",
         "pocetObyvatelov": 43079,
         "psc": "811 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.14497,
@@ -36,7 +33,6 @@
         "mesto": "Bratislava II",
         "pocetObyvatelov": 39510,
         "psc": "821 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.15665,
@@ -47,7 +43,6 @@
         "mesto": "Bratislava III",
         "pocetObyvatelov": 66303,
         "psc": "831 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.16923,
@@ -58,7 +53,6 @@
         "mesto": "Bratislava IV",
         "pocetObyvatelov": 92684,
         "psc": "841 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.19103,
@@ -69,7 +63,6 @@
         "mesto": "Bratislava V",
         "pocetObyvatelov": 117234,
         "psc": "851 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.15419,
@@ -80,7 +73,6 @@
         "mesto": "Brezno",
         "pocetObyvatelov": 20447,
         "psc": "977 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.80493,
@@ -91,7 +83,6 @@
         "mesto": "Bytča",
         "pocetObyvatelov": 15257,
         "psc": "014 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.21532,
@@ -102,7 +93,6 @@
         "mesto": "Detva",
         "pocetObyvatelov": 16157,
         "psc": "962 12",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.54712,
@@ -113,7 +103,6 @@
         "mesto": "Dolný Kubín",
         "pocetObyvatelov": 17427,
         "psc": "026 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.21615,
@@ -124,7 +113,6 @@
         "mesto": "Dunajská Streda",
         "pocetObyvatelov": 23070,
         "psc": "929 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 47.9943,
@@ -135,7 +123,6 @@
         "mesto": "Galanta",
         "pocetObyvatelov": 16725,
         "psc": "924 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.20107,
@@ -146,7 +133,6 @@
         "mesto": "Gelnica",
         "pocetObyvatelov": 11027,
         "psc": "056 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.86246,
@@ -157,7 +143,6 @@
         "mesto": "Hlohovec",
         "pocetObyvatelov": 22714,
         "psc": "920 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.4298,
@@ -168,7 +153,6 @@
         "mesto": "Holíč",
         "pocetObyvatelov": 7273,
         "psc": "908 51",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.74267,
@@ -179,7 +163,6 @@
         "mesto": "Hurbanovo",
         "pocetObyvatelov": 9186,
         "psc": "947 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 47.88946,
@@ -190,7 +173,6 @@
         "mesto": "Humenné",
         "pocetObyvatelov": 33743,
         "psc": "066 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.93944,
@@ -201,7 +183,6 @@
         "mesto": "Ilava",
         "pocetObyvatelov": 10966,
         "psc": "018 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.0956,
@@ -212,7 +193,6 @@
         "mesto": "Kežmarok",
         "pocetObyvatelov": 16576,
         "psc": "060 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.13333,
@@ -223,7 +203,6 @@
         "mesto": "Komárno",
         "pocetObyvatelov": 34464,
         "psc": "945 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 47.75634,
@@ -234,7 +213,6 @@
         "mesto": "Košice I",
         "pocetObyvatelov": 50068,
         "psc": "040 11",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.72056,
@@ -245,7 +223,6 @@
         "mesto": "Košice II",
         "pocetObyvatelov": 52288,
         "psc": "040 12",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.73389,
@@ -256,7 +233,6 @@
         "mesto": "Košice III",
         "pocetObyvatelov": 57477,
         "psc": "040 13",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.72998,
@@ -267,7 +243,6 @@
         "mesto": "Košice IV",
         "pocetObyvatelov": 60476,
         "psc": "040 14",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.73456,
@@ -278,7 +253,6 @@
         "mesto": "Košice-okolie",
         "pocetObyvatelov": 57719,
         "psc": "040 22",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.72197,
@@ -289,7 +263,6 @@
         "mesto": "Krupina",
         "pocetObyvatelov": 9550,
         "psc": "963 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.4068,
@@ -300,7 +273,6 @@
         "mesto": "Kysucké Nové Mesto",
         "pocetObyvatelov": 11997,
         "psc": "023 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.32318,
@@ -311,7 +283,6 @@
         "mesto": "Levice",
         "pocetObyvatelov": 33032,
         "psc": "934 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.21123,
@@ -322,7 +293,6 @@
         "mesto": "Levoča",
         "pocetObyvatelov": 14108,
         "psc": "054 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.0275,
@@ -333,7 +303,6 @@
         "mesto": "Liptovský Mikuláš",
         "pocetObyvatelov": 31779,
         "psc": "031 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.08133,
@@ -344,7 +313,6 @@
         "mesto": "Lučenec",
         "pocetObyvatelov": 25114,
         "psc": "984 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.33102,
@@ -355,7 +323,6 @@
         "mesto": "Malacky",
         "pocetObyvatelov": 18218,
         "psc": "901 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.43494,
@@ -366,7 +333,6 @@
         "mesto": "Martin",
         "pocetObyvatelov": 60952,
         "psc": "036 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.05996,
@@ -377,7 +343,6 @@
         "mesto": "Medzilaborce",
         "pocetObyvatelov": 5701,
         "psc": "067 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.27417,
@@ -388,7 +353,6 @@
         "mesto": "Michalovce",
         "pocetObyvatelov": 38195,
         "psc": "071 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.75507,
@@ -399,7 +363,6 @@
         "mesto": "Myjava",
         "pocetObyvatelov": 12632,
         "psc": "907 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.74996,
@@ -410,7 +373,6 @@
         "mesto": "Námestovo",
         "pocetObyvatelov": 13563,
         "psc": "029 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.43111,
@@ -421,7 +383,6 @@
         "mesto": "Nitra",
         "pocetObyvatelov": 78735,
         "psc": "949 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.30899,
@@ -432,7 +393,6 @@
         "mesto": "Nové Mesto nad Váhom",
         "pocetObyvatelov": 22667,
         "psc": "915 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.7582,
@@ -443,7 +403,6 @@
         "mesto": "Nové Zámky",
         "pocetObyvatelov": 40859,
         "psc": "940 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 47.98689,
@@ -454,7 +413,6 @@
         "mesto": "Partizánske",
         "pocetObyvatelov": 23547,
         "psc": "958 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.63019,
@@ -465,7 +423,6 @@
         "mesto": "Pezinok",
         "pocetObyvatelov": 24090,
         "psc": "902 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.27588,
@@ -476,7 +433,6 @@
         "mesto": "Piešťany",
         "pocetObyvatelov": 28414,
         "psc": "921 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.59496,
@@ -487,7 +443,6 @@
         "mesto": "Poltár",
         "pocetObyvatelov": 6517,
         "psc": "985 41",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.32792,
@@ -498,7 +453,6 @@
         "mesto": "Poprad",
         "pocetObyvatelov": 51927,
         "psc": "058 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.05808,
@@ -509,7 +463,6 @@
         "mesto": "Považská Bystrica",
         "pocetObyvatelov": 43895,
         "psc": "017 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.08199,
@@ -520,7 +473,6 @@
         "mesto": "Prešov",
         "pocetObyvatelov": 92601,
         "psc": "080 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 49.00266,
@@ -531,7 +483,6 @@
         "mesto": "Prievidza",
         "pocetObyvatelov": 49002,
         "psc": "971 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.77237,
@@ -542,7 +493,6 @@
         "mesto": "Púchov",
         "pocetObyvatelov": 20339,
         "psc": "020 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.13383,
@@ -553,7 +503,6 @@
         "mesto": "Revúca",
         "pocetObyvatelov": 9454,
         "psc": "982 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.70797,
@@ -564,7 +513,6 @@
         "mesto": "Rimavská Sobota",
         "pocetObyvatelov": 24990,
         "psc": "979 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.36683,
@@ -575,7 +523,6 @@
         "mesto": "Rožňava",
         "pocetObyvatelov": 19179,
         "psc": "048 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.66037,
@@ -586,7 +533,6 @@
         "mesto": "Ružomberok",
         "pocetObyvatelov": 28848,
         "psc": "034 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.08129,
@@ -597,7 +543,6 @@
         "mesto": "Sabinov",
         "pocetObyvatelov": 11413,
         "psc": "083 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.12639,
@@ -608,7 +553,6 @@
         "mesto": "Šaľa",
         "pocetObyvatelov": 26301,
         "psc": "927 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.14891,
@@ -619,7 +563,6 @@
         "mesto": "Senec",
         "pocetObyvatelov": 21162,
         "psc": "903 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.20603,
@@ -630,7 +573,6 @@
         "mesto": "Senica",
         "pocetObyvatelov": 21094,
         "psc": "905 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.68079,
@@ -641,7 +583,6 @@
         "mesto": "Skalica",
         "pocetObyvatelov": 14256,
         "psc": "909 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.84512,
@@ -652,7 +593,6 @@
         "mesto": "Snina",
         "pocetObyvatelov": 18774,
         "psc": "069 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.99633,
@@ -663,7 +603,6 @@
         "mesto": "Sobrance",
         "pocetObyvatelov": 12439,
         "psc": "072 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.74917,
@@ -674,7 +613,6 @@
         "mesto": "Spišská Nová Ves",
         "pocetObyvatelov": 39486,
         "psc": "052 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.94909,
@@ -685,7 +623,6 @@
         "mesto": "Spišská Stará Ves",
         "pocetObyvatelov": 8927,
         "psc": "053 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.10095,
@@ -696,7 +633,6 @@
         "mesto": "Stará Ľubovňa",
         "pocetObyvatelov": 16026,
         "psc": "064 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.30583,
@@ -707,7 +643,6 @@
         "mesto": "Stropkov",
         "pocetObyvatelov": 15637,
         "psc": "091 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.21484,
@@ -718,7 +653,6 @@
         "mesto": "Svidník",
         "pocetObyvatelov": 10143,
         "psc": "089 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.30303,
@@ -729,7 +663,6 @@
         "mesto": "Topoľčany",
         "pocetObyvatelov": 27440,
         "psc": "955 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.52278,
@@ -740,7 +673,6 @@
         "mesto": "Trebišov",
         "pocetObyvatelov": 22133,
         "psc": "075 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.6235,
@@ -751,7 +683,6 @@
         "mesto": "Trenčianske Teplice",
         "pocetObyvatelov": 5942,
         "psc": "914 51",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.9238,
@@ -762,7 +693,6 @@
         "mesto": "Trenčín",
         "pocetObyvatelov": 56468,
         "psc": "911 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.89438,
@@ -773,7 +703,6 @@
         "mesto": "Trnava",
         "pocetObyvatelov": 63630,
         "psc": "917 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 48.3768,
@@ -784,7 +713,6 @@
         "mesto": "Turčianske Teplice",
         "pocetObyvatelov": 4034,
         "psc": "039 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.8425,
@@ -795,7 +723,6 @@
         "mesto": "Tvrdošín",
         "pocetObyvatelov": 13052,
         "psc": "029 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 49.43496,
@@ -806,7 +733,6 @@
         "mesto": "Veľký Krtíš",
         "pocetObyvatelov": 13937,
         "psc": "990 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.21352,
@@ -817,7 +743,6 @@
         "mesto": "Vranov nad Topľou",
         "pocetObyvatelov": 22391,
         "psc": "093 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.8939,
@@ -828,7 +753,6 @@
         "mesto": "Žarnovica",
         "pocetObyvatelov": 5177,
         "psc": "966 81",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.435,
@@ -839,7 +763,6 @@
         "mesto": "Želiezovce",
         "pocetObyvatelov": 11109,
         "psc": "937 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 47.95121,
@@ -850,7 +773,6 @@
         "mesto": "Žiar nad Hronom",
         "pocetObyvatelov": 39540,
         "psc": "965 01",
-        "select": false,
         "krajske": false,
         "coordinates": {
             "latitude": 48.38332,
@@ -861,7 +783,6 @@
         "mesto": "Žilina",
         "pocetObyvatelov": 81455,
         "psc": "010 01",
-        "select": false,
         "krajske": true,
         "coordinates": {
             "latitude": 49.22246,

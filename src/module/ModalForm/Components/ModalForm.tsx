@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { useForm, SubmitHandler } from "react-hook-form";
-import cites from "../../utils/cities.json"
-import { TypeCitesObject } from '../../Container/types';
+import { TypeCitesObject } from '../../utils/types';
+import servicesCitiesJSON from '../../utils/services';
 import "../../utils/i18n"
 import { useTranslation } from 'react-i18next';
 import { Props } from '../type';
@@ -28,11 +28,12 @@ function ModalForm({ show, setShow }: Props) {
 
     /* on Submit */
     const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
-        const filter = cites.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.register);
+        const allCities = servicesCitiesJSON.citiesJSON()
+        const filter = allCities.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.register);
         if (filter[0] !== undefined) {
             setFilterCities(filter[0])
         } else {
-            alert("cities no exist")
+            alert("cities no exist") 
         }
     }
 

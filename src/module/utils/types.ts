@@ -17,10 +17,14 @@ export type TypeCitesArray = {
     mesto: string,
     pocetObyvatelov: number,
     psc: string,
-    select: boolean
+    select: {
+        type: boolean,
+        target: string
+    }
     krajske: boolean,
     coordinates: {
         latitude: number
         longitude: number,
     },
 }[]
+

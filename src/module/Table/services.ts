@@ -1,6 +1,6 @@
-import citiesJSON from "../utils/cities.json"
-import { TypeCitesObject } from "../Container/types"
-import { TypeCitesArray } from "../Container/types"
+import servicesCitiesJSON from "../utils/services"
+import { TypeCitesObject } from "../utils/types"
+import { TypeCitesArray } from "../utils/types"
 
 const servicesObjectDesignationFromJSON = {
     objectDesignationFromJSON
@@ -10,11 +10,12 @@ export default servicesObjectDesignationFromJSON
 
 function objectDesignationFromJSON(cities: string): TypeCitesArray {
     let newCityArray: TypeCitesArray = []
-    citiesJSON.forEach((item: TypeCitesObject) => {
+    
+    servicesCitiesJSON.citiesJSON().forEach((item: TypeCitesObject) => {
         if (item.mesto === cities) {
-            item.select = true
+            item.select.type = true
 
-        } else { item.select = false }
+        } else { item.select.type = false }
         newCityArray.push(item)
     })
     return (

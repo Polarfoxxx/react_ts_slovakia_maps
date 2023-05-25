@@ -3,11 +3,11 @@ import "../style/Maps.style.css"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from 'leaflet';
-import citiesJSON from "../../utils/cities.json"
+import servicesCitiesJSON from "../../utils/services";
 import { Container } from "../../Container";
 import { TypeIcon } from "../type";
-import { TypeCitesArray } from "../../Container/types";
-import { TypeCitesObject } from "../../Container/types";
+import { TypeCitesArray } from "../../utils/types";
+import { TypeCitesObject } from "../../utils/types";
 import servicesObjectDesignationFromJSON from "../../Table/services";
 
 
@@ -17,7 +17,7 @@ function Maps(): JSX.Element {
 
     /* nastavenie zoznamu vsetkych miest */
     React.useEffect(() => {
-        setAllcities(citiesJSON)
+        setAllcities(servicesCitiesJSON.citiesJSON)
     }, [])
 
     /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
@@ -40,7 +40,7 @@ function Maps(): JSX.Element {
     });
     /* funkcia meniaca markery */
     const iconType = (city: TypeCitesObject): Icon<TypeIcon> =>
-        city.krajske ? (city.select ? selectIcon : largeIcon) : (city.select ? selectIcon : normalIcon);
+        city.krajske ? (city.select.type ? selectIcon : largeIcon) : (city.select.type ? selectIcon : normalIcon);
 
 
     return (

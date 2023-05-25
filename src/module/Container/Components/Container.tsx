@@ -1,27 +1,28 @@
 import React from "react";
 import "../style/Container.style.css"
-import { TypeCitesArray } from "../types";
-import { TypeCitesObject } from "../types";
+import { TypeCitesArray } from "../../utils/types";
+import { TypeCitesObject } from "../../utils/types";
 import { TypeContextProvider } from "../types";
 import { useTranslation } from 'react-i18next';
 import "../../utils/i18n"
-import citiesJSON from "../../utils/cities.json"
+import servicesCitiesJSON from "../../utils/services";
 import { Props } from "../types";
 
 const Context = React.createContext<TypeContextProvider>({
     cities: [],
     setCities: () => { }
 })
+console.log(servicesCitiesJSON.citiesJSON());
 
 function Provider({ children }: Props): JSX.Element {
-    const [cities, setCities] = React.useState<TypeCitesArray>(citiesJSON)
+    const [cities, setCities] = React.useState<TypeCitesArray>(servicesCitiesJSON.citiesJSON)
     const { t } = useTranslation();
 
     /* reset button */
     const handleRessetButton = (): void => {
         let resetArray: TypeCitesArray = []
         cities.map((item: TypeCitesObject) => {
-            item.select = false
+            item.select.type = false
             resetArray.push(item)
         })
         setCities(resetArray)

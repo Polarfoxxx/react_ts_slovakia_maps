@@ -1,7 +1,7 @@
 import React from "react"
 import "../style/Table.style.css"
 import { Container } from "../../Container"
-import { TypeCitesObject } from "../../Container/types"
+import { TypeCitesObject } from "../../utils/types"
 import { useTranslation } from "react-i18next"
 import "../../utils/i18n"
 import servicesObjectDesignationFromJSON from "../services"
@@ -43,9 +43,9 @@ function Table(): JSX.Element {
                 <tbody className="tableBody">
                     {cities.map((item: TypeCitesObject, index: number) => (
                         <tr
-                            ref={item.select ? cellReff : null}
+                            ref={item.select.type ? cellReff : null}
                             className="tabRows"
-                            style={{ backgroundColor: item.select ? "orange" : "black" }}
+                            style={{ backgroundColor: item.select.type ? "orange" : "black" }}
                             key={index}
                             onClick={(e) => handleTable(item.mesto, e)}>
                             <td className="block">{item.mesto}</td>
