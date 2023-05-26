@@ -9,6 +9,7 @@ import { TypeIcon } from "../type";
 import { TypeCitesArray } from "../../utils/types";
 import { TypeCitesObject } from "../../utils/types";
 import servicesObjectDesignationFromJSON from "../../Table/services";
+import * as L from 'leaflet';
 
 
 function Maps(): JSX.Element {
@@ -21,8 +22,9 @@ function Maps(): JSX.Element {
     }, [])
 
     /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
-    const handleMarkerClick = (city: string) => {
-        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(city))
+    const handleMarkerClick = (city: string, e: L.LeafletMouseEvent) => {
+       const mapEvent =  e.target.options.pane
+         setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(city, mapEvent))
     }
 
     /* create marker icon */
@@ -57,11 +59,12 @@ function Maps(): JSX.Element {
                         <Marker
                             key={index}
                             position={[city.coordinates.latitude, city.coordinates.longitude]}
-                            eventHandlers= {{click: (e) => {handleMarkerClick(city.mesto)}}}
+                            eventHandlers={{ click: (e) => { handleMarkerClick(city.mesto, e) } }}
                             icon={iconType(city)}>
-                                <Popup>
-                                    {city.mesto}
-                                </Popup>
+                            <Popup
+                                className="mapMarker">
+                                {city.mesto}
+                            </Popup>
                         </Marker>
                     ))
                 }

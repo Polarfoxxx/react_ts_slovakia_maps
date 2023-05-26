@@ -25,7 +25,8 @@ function Table(): JSX.Element {
 
     /* funkcia oznacenia mesta z JSONu..  */
     const handleTable = (cities: string, e: React.MouseEvent<HTMLElement>): void => {
-        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(cities))
+        const eventType = e.currentTarget.id
+        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(cities, eventType))
     }
 
     return (
@@ -43,7 +44,8 @@ function Table(): JSX.Element {
                 <tbody className="tableBody">
                     {cities.map((item: TypeCitesObject, index: number) => (
                         <tr
-                            ref={item.select.type ? cellReff : null}
+                            ref={item.select.type && item.select.target === "markerPane" ? cellReff : null}
+                            id="tableCell"
                             className="tabRows"
                             style={{ backgroundColor: item.select.type ? "orange" : "black" }}
                             key={index}
