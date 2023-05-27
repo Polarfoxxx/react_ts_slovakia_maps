@@ -10,6 +10,7 @@ import { TypeCitesArray } from "../../utils/types";
 import { TypeCitesObject } from "../../utils/types";
 import servicesObjectDesignationFromJSON from "../../Table/services";
 import * as L from 'leaflet';
+import serviceChangeMarkerIcon from "../services";
 
 
 function Maps(): JSX.Element {
@@ -27,22 +28,13 @@ function Maps(): JSX.Element {
          setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(city, mapEvent))
     }
 
-    /* create marker icon */
-    const normalIcon: Icon<TypeIcon> = new Icon({
-        iconUrl: '/img/location-marker.png',
-        iconSize: [30, 30],
-    });
-    const largeIcon: Icon<TypeIcon> = new Icon({
-        iconUrl: '/img/location-marker.png',
-        iconSize: [50, 50],
-    });
-    const selectIcon: Icon<TypeIcon> = new Icon({
-        iconUrl: '/img/select Marker.png',
-        iconSize: [45, 70],
-    });
+ 
     /* funkcia meniaca markery */
-    const iconType = (city: TypeCitesObject): Icon<TypeIcon> =>
-        city.krajske ? (city.select.type ? selectIcon : largeIcon) : (city.select.type ? selectIcon : normalIcon);
+    const iconType = (city: TypeCitesObject): Icon<TypeIcon> => {
+       return serviceChangeMarkerIcon.changeMarkerIcon(city)
+    }
+       
+    
 
 
     return (
