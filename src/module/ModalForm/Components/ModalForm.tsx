@@ -27,7 +27,7 @@ function ModalForm({ show, setShow }: Props) {
     /* on Submit */
     const handleSubmitFrominput: SubmitHandler<TypeInput> = data => {
         const allCities = servicesCitiesJSON.citiesJSON()
-        const filter = allCities.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.register);
+        const filter = allCities.filter((item: TypeCitesObject) => item.psc.replace(/\s+/g, "") === data.code);
         if (filter[0] !== undefined) {
             setFilterCities(filter[0])
         } else {
