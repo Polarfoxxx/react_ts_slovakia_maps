@@ -6,5 +6,5 @@ export type Props = {
 }
 
 export type TypeInput = {
-    register: string
+    code: string
 }

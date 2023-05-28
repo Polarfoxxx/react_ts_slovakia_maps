@@ -49,7 +49,7 @@ function ModalForm({ show, setShow }: Props) {
                                 type="search"
                                 placeholder="code"
                                 autoFocus
-                                {...register("register")}
+                                {...register("code")}
                             />
                         </Form.Group>
                         <Form.Group
