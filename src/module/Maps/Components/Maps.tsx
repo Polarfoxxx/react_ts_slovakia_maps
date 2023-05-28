@@ -8,9 +8,9 @@ import { Container } from "../../Container";
 import { TypeIcon } from "../type";
 import { TypeCitesArray } from "../../utils/types";
 import { TypeCitesObject } from "../../utils/types";
-import servicesObjectDesignationFromJSON from "../../Table/services";
+import servicesDesignationOfTheCityInJSON from "../../Table/services/services";
 import * as L from 'leaflet';
-import serviceChangeMarkerIcon from "../services";
+import serviceChangeMarkerIcon from "../services/services";
 
 
 function Maps(): JSX.Element {
@@ -25,7 +25,7 @@ function Maps(): JSX.Element {
     /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
     const handleMarkerClick = (city: string, e: L.LeafletMouseEvent) => {
        const mapEvent =  e.target.options.pane
-         setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(city, mapEvent))
+         setCities(servicesDesignationOfTheCityInJSON.designationOfTheCityInJSON(city, mapEvent))
     }
 
  

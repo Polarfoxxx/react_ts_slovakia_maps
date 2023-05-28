@@ -1,7 +1,7 @@
 
-import { TypeIcon } from "./type";
+import { TypeIcon } from "../type";
 import { Icon } from 'leaflet';
-import { TypeCitesObject } from "../utils/types";
+import { TypeCitesObject } from "../../utils/types";
 
 const serviceChangeMarkerIcon = {
     changeMarkerIcon
@@ -24,7 +24,7 @@ const selectIcon: Icon<TypeIcon> = new Icon({
 
 
 function changeMarkerIcon(city: TypeCitesObject): Icon<TypeIcon> {
-    const iconMarker = city.krajske ? (city.select.type ? selectIcon : largeIcon) : (city.select.type ? selectIcon : normalIcon)
+    const iconMarker = city.krajske ? (city.select.type ? selectIcon : largeIcon) : (city.select.type ? selectIcon : normalIcon)  
     return (
         iconMarker
     )

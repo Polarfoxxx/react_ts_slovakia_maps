@@ -4,7 +4,7 @@ import { Container } from "../../Container"
 import { TypeCitesObject } from "../../utils/types"
 import { useTranslation } from "react-i18next"
 import "../../utils/i18n"
-import servicesObjectDesignationFromJSON from "../services"
+import servicesObjectDesignationFromJSON from "../services/services"
 
 
 
@@ -26,7 +26,7 @@ function Table(): JSX.Element {
     /* funkcia oznacenia mesta z JSONu..  */
     const handleTable = (cities: string, e: React.MouseEvent<HTMLElement>): void => {
         const eventType = e.currentTarget.id
-        setCities(servicesObjectDesignationFromJSON.objectDesignationFromJSON(cities, eventType))
+        setCities(servicesObjectDesignationFromJSON.designationOfTheCityInJSON(cities, eventType))
     }
 
     return (
