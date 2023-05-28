@@ -24,18 +24,15 @@ function Maps(): JSX.Element {
 
     /* funkcia po kliknuti na marker oznacenie selectoru v JSONe*/
     const handleMarkerClick = (city: string, e: L.LeafletMouseEvent) => {
-       const mapEvent =  e.target.options.pane
-         setCities(servicesDesignationOfTheCityInJSON.designationOfTheCityInJSON(city, mapEvent))
+        const mapEvent = e.target.options.pane
+        setCities(servicesDesignationOfTheCityInJSON.designationOfTheCityInJSON(city, mapEvent))
     }
 
- 
+
     /* funkcia meniaca markery */
     const iconType = (city: TypeCitesObject): Icon<TypeIcon> => {
-       return serviceChangeMarkerIcon.changeMarkerIcon(city)
+        return serviceChangeMarkerIcon.changeMarkerIcon(city)
     }
-       
-    
-
 
     return (
         <div className="maps">

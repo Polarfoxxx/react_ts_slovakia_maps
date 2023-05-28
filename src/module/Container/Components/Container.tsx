@@ -12,7 +12,6 @@ const Context = React.createContext<TypeContextProvider>({
     cities: [],
     setCities: () => { }
 })
-console.log(servicesCitiesJSON.citiesJSON());
 
 function Provider({ children }: Props): JSX.Element {
     const [cities, setCities] = React.useState<TypeCitesArray>(servicesCitiesJSON.citiesJSON)
@@ -27,7 +26,6 @@ function Provider({ children }: Props): JSX.Element {
         })
         setCities(resetArray)
     }
-
 
 
     return (

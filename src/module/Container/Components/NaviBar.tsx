@@ -15,16 +15,15 @@ function NaviBar({ setIndex, index }: Props): JSX.Element {
   const [show, setShow] = React.useState(false);
   const { i18n, t } = useTranslation()
 
-
   /* funkcia pre zmenu indexu pre zmenu zobrazenia componentov */
   const handleChangeLayout = (event: React.MouseEvent<HTMLButtonElement>): void => {
     setIndex(prew => prew + 1)
     index === 2 && setIndex(0)
   }
-
-const changeLang = (lg: string): void => {
-  i18n.changeLanguage(lg)
-}
+  /* funkcia pre preklad */
+  const changeLang = (lg: string): void => {
+    i18n.changeLanguage(lg)
+  }
 
   return (
     <>

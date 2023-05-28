@@ -6,22 +6,19 @@ import { useTranslation } from "react-i18next"
 import "../../utils/i18n"
 import servicesObjectDesignationFromJSON from "../services/services"
 
-
-
 function Table(): JSX.Element {
     const tableReff = React.useRef<HTMLDivElement>(null)
     const cellReff = React.useRef<HTMLTableRowElement>(null)
     const { setCities, cities } = React.useContext(Container.Context)
     const { t } = useTranslation()
 
-/* auto scrool by selecte */
+    /* auto scrool by selecte */
     React.useEffect(() => {
         if (tableReff.current && cellReff.current) {
             const rowPosition = cellReff.current.offsetTop - tableReff.current.offsetTop;
             tableReff.current.scrollTop = rowPosition;
         }
     }, [cities])
-
 
     /* funkcia oznacenia mesta z JSONu..  */
     const handleTable = (cities: string, e: React.MouseEvent<HTMLElement>): void => {

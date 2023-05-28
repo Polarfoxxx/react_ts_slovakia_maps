@@ -12,8 +12,6 @@ import { Props } from '../type';
 import { TypeInput } from '../type';
 import { defCitiesObject } from '../defValue';
 
-
-
 function ModalForm({ show, setShow }: Props) {
     const [filterCities, setFilterCities] = React.useState<TypeCitesObject>()
     const { register, handleSubmit, reset } = useForm<TypeInput>()
@@ -33,7 +31,7 @@ function ModalForm({ show, setShow }: Props) {
         if (filter[0] !== undefined) {
             setFilterCities(filter[0])
         } else {
-            alert("cities no exist") 
+            alert("cities no exist")
         }
     }
 

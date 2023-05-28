@@ -16,7 +16,6 @@ i18n
           city: "City",
           residents: "Residents",
           code: "Code",
-          // další překlady...
         },
       },
       sk: {
@@ -30,12 +29,11 @@ i18n
           city: "Mesto",
           residents: "Obyvatelov",
           code: "PSC",
-          // další překlady...
         },
       },
     },
-    lng: 'en', // výchozí jazyk
-    fallbackLng: 'en', // výchozí jazyk, pokud překlad není k dispozici
+    lng: 'en',            // výchozí jazyk
+    fallbackLng: 'en',    // výchozí jazyk, pokud překlad není k dispozici
     interpolation: {
       escapeValue: false, // nevyžadovat escapování režijních znaků
     },
