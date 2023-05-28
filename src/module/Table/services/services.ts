@@ -1,5 +1,4 @@
 import servicesCitiesJSON from "../../utils/services"
-import { TypeCitesObject } from "../../utils/types"
 import { TypeCitesArray } from "../../utils/types"
 
 const servicesDesignationOfTheCityInJSON = {
@@ -9,7 +8,20 @@ export default servicesDesignationOfTheCityInJSON
 
 
 function designationOfTheCityInJSON(cities: string, eventType: string): TypeCitesArray {
-    let newCityArray: TypeCitesArray = []
+   return servicesCitiesJSON.citiesJSON().map((item) => {
+    const isCities = item.mesto === cities;
+    return {
+        ...item,
+        select: {
+            type: isCities,
+            target: isCities ? eventType : ""
+        }
+    }
+   })
+
+
+
+/*     let newCityArray: TypeCitesArray = []
     servicesCitiesJSON.citiesJSON().forEach((item: TypeCitesObject) => {
         if (item.mesto === cities) {
             item.select = {
@@ -26,5 +38,5 @@ function designationOfTheCityInJSON(cities: string, eventType: string): TypeCite
     })
     return (
         newCityArray
-    )
+    ) */
 }
